@@ -13,8 +13,14 @@ class BasicTicketsFeatures extends Specification {
 
     void 'get ticket' () {
         given:
-        response = client.getForEntity("http://localhost:1133/coffee", String.class)
+        response = client.getForEntity("http://localhost:8080/ticket", String.class)
         expect:
         response.statusCode.'2xxSuccessful'
+    }
+
+    void 'get information about available tickets' () {
+    }
+
+    void 'get information about available tickets' () {
     }
 }
